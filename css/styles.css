@@ -233,7 +233,12 @@ img {
     .mobil-social-list {
         display: flex;
         justify-content: flex-start;
-        gap: 56px;
+        gap: 40px;
+    }
+
+    .mobil-social-list-item {
+        margin-right: 0;
+        flex-basis: calc((100% - 3 * 40px) / 4);
     }
     
     .mobil-social-list-link {
@@ -258,7 +263,7 @@ img {
     
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
     .mobil-menu-open{
         display: none;
     }
@@ -319,7 +324,6 @@ img {
     background-color: var(--active-color-button);
 }
 
-
 .nav-link:hover, .nav-link:focus,
 .nav-link:active, .contact:hover,
 .contact:focus, .contact:active {
@@ -367,6 +371,34 @@ img {
    
 
 /*__________Hero section_________*/
+
+.hero-section {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* @media screen and (min-width: 320px) {
+    .hero-section {
+        padding-top: 112px;
+        padding-bottom: 112px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/photo-mobil-bg.jpg);
+    }
+
+    .hero-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        color: var(--maine-color-background);
+    }
+} */
+
 /* 
 .hero-section {
     text-align: center;

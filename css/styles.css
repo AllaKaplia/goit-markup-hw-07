@@ -232,6 +232,12 @@ img {
     margin-bottom: 72px;
 }
 
+.resumes-item {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+    max-width: 264px;
+}
 
 .container-resume {
     display: block;
@@ -514,6 +520,7 @@ img {
         font-size: 56px;
         line-height: 1.07;
     }
+
     /* ____________Benefits section__________*/
 
     .benefits {
@@ -524,6 +531,22 @@ img {
     }
 
     .benefits .item {
+        margin-right: 0;
+        flex-basis: calc((100% - 1*24px) / 2);
+    }
+
+    /*_________Resumes section___________*/
+    .resumes-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+    
+    .resumes-item {
+        margin-bottom: 0;
+        margin-left: 0;
         margin-right: 0;
         flex-basis: calc((100% - 1*24px) / 2);
     }
@@ -577,12 +600,21 @@ img {
     
         transition: color 250ms var(--timing-function);
     }
+
     /*__________Hero section_________*/
+
     .hero-section {
-        padding-top: 192px;
-        padding-bottom: 192px;
+        padding-top: 188px;
+        padding-bottom: 188px;
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-bg.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-bg2x.jpg);
     }
     
     .section {
@@ -657,6 +689,19 @@ img {
         display: flex;
         gap: 24px;
     }
+
+    /*_________Resumes section___________*/
+    .resumes-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .resumes-item {
+        margin-right: 0;
+        margin-bottom: 0;
+        flex-basis: calc((100% - 3*24px) / 4);
+    }
+
 }
 
 
@@ -665,14 +710,11 @@ img {
 
 /*_________Resumes section___________*/
 /* 
-.resumes {
-    background-color: var(--color-thumb);
-}
 
 .resumes-list {
     display: flex;
     gap: 24px;
- }
+}
 
 .container-resume {
     display: block;

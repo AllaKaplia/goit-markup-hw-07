@@ -136,8 +136,7 @@ img {
     color: var(--maine-color-background);
 }
 
-.hero-button
- {
+.hero-button{
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: transparent;
@@ -193,7 +192,7 @@ img {
     overflow: hidden;
 }
 
-.benefit-subtitle, .resume-name {
+.benefit-subtitle{
     margin-bottom: 8px;
 
     font-weight: 700;
@@ -203,7 +202,7 @@ img {
     color: var(--base-color-text);
 }
 
-.benefit-details, .resume-specialty {
+.benefit-details {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -228,10 +227,38 @@ img {
     text-align: center;
 }
 
-.resumes-title {
+.resumes-title, .customers-title {
     margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--base-color-text);
 }
 
+.resumes-item {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+    max-width: 264px;
+}
+
+.resume-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--base-color-text);
+}
+
+.resume-specialty {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-decoration-text);
+}
 
 .container-resume {
     display: block;
@@ -267,7 +294,185 @@ img {
 
 .social-list-link:hover{
     background-color: var(--active-color-button);
-} */
+}
+
+/*_____Customers section_____*/
+
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 72px;
+}
+
+.customers-item {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+}
+
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88px;
+    border: 1px solid var(--color-accent-form);
+    border-radius: 4px;
+    fill: var(--color-accent-form);
+
+    transition: border-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border-color: var(--active-color-button);
+    fill: var(--active-color-button);
+}
+
+/*______Footer section______*/
+
+.footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    background-color: var(--base-color-text);
+}
+
+.footer-container {
+    text-align: center;
+} 
+
+.container-footer {
+    margin: 0 auto;
+    max-width: 268px;
+}
+
+.container-footer, .footer-social {
+    margin-bottom: 72px;
+}
+
+.footer-logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--color-thumb);
+}
+
+.footer-logo-web {
+    color: var(--color-style-logo);
+}
+
+.footer-text {
+    width: 264px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: justify;
+    color: var(--border-color);
+}
+
+.social-media, .subscription-title {
+    margin-bottom: 16px;
+    color: var(--maine-color-background);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.social-media-list {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.social-media-item, .social-media-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    transition: background-color 250ms var(--timing-function),
+    border-radius 250ms var(--timing-function);
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+    background-color: var(--color-hover-social);
+    border-radius: 50%;
+}
+
+.subscription-form-email {
+    position: relative;
+    width: 264px;
+}
+
+.subscription-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    color: var(--border-color);
+    
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    outline: transparent;
+
+    transition: transform 250ms var(--timing-function),
+    transition-delay 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+}
+
+.subscription-input:focus + .subscription-form-name,
+.subscription-input:not(:placeholder-shown) + .subscription-form-name {
+    transform: translateY(-120%);
+}
+
+.subscription-input::placeholder {
+    opacity: 0;
+}
+
+.subscription-input:focus::placeholder {
+    opacity: 1;
+    transition-delay: 200ms;
+}
+
+.subscription-form-name{
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+
+    line-height: 1.5;
+}
+
+.subscription-btn-send {
+    margin-left: 16px;
+}
 
 @media screen and (min-width: 480px) {
     .hero-section {
@@ -282,6 +487,10 @@ img {
     .hero-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-bg2x.jpg);
     }
+
+    .thumb {
+        display: none;
+    }
 }
 }
 
@@ -294,6 +503,16 @@ img {
     .contacts {
         display: none;
     } 
+}
+
+@media screen and (max-width: 1199px) {
+    .thumb {
+        display: none;
+    }
+
+    .illustrations {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -514,6 +733,20 @@ img {
         font-size: 56px;
         line-height: 1.07;
     }
+
+    .hero-section {
+        padding-top: 112px;
+        padding-bottom: 108px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-bg.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-bg2x.jpg);
+    }
+
     /* ____________Benefits section__________*/
 
     .benefits {
@@ -528,16 +761,76 @@ img {
         flex-basis: calc((100% - 1*24px) / 2);
     }
 
-}
-
-@media screen and (max-width: 1199px) {
-    .thumb {
-        display: none;
+    /*_________Resumes section___________*/
+    .resumes-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+    
+    .resumes-item {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        flex-basis: calc((100% - 1*24px) / 2);
     }
 
-    .illustrations {
-        display: none;
+    /*_____Customers section_____*/
+    .customers-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
     }
+
+    .customers-item {
+        flex-basis: calc((100% - 2 * 24px) / 3);
+    }
+
+    /*______Footer section______*/
+
+    .footer-container {
+        display: flex;
+        column-gap: 24px;
+        row-gap: 72px;
+        flex-wrap: wrap;
+    }
+
+    .container-footer {
+        margin: 0;
+        text-align: justify;
+    }
+
+    .footer-item {
+        margin-bottom: 0;
+        flex-basis: calc((100% - 1 * 24px) / 2);;
+    }
+
+    .subscription-form {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .social-media, .subscription-title {
+        text-align: justify;
+    }
+
+    .social-media-list {
+        justify-content: flex-start;
+    }
+
+    .subscription-input {
+        margin-bottom: 0;
+    }
+
+    .subscription-form-name {
+        top: 8px;
+    }
+
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -577,12 +870,21 @@ img {
     
         transition: color 250ms var(--timing-function);
     }
+
     /*__________Hero section_________*/
+
     .hero-section {
-        padding-top: 192px;
-        padding-bottom: 192px;
+        padding-top: 188px;
+        padding-bottom: 188px;
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-bg.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-bg2x.jpg);
     }
     
     .section {
@@ -657,231 +959,47 @@ img {
         display: flex;
         gap: 24px;
     }
-}
 
+    /*_________Resumes section___________*/
+    .resumes-list {
+        display: flex;
+        gap: 24px;
+    }
 
+    .resumes-item {
+        margin-right: 0;
+        margin-bottom: 0;
+        flex-basis: calc((100% - 3*24px) / 4);
+    }
 
-
-
-/*_________Resumes section___________*/
-/* 
-.resumes {
-    background-color: var(--color-thumb);
-}
-
-.resumes-list {
-    display: flex;
-    gap: 24px;
- }
-
-.container-resume {
-    display: block;
-    text-align: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    width: 264px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
-    background-color: var(--maine-color-background);
-}
-
-.social-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 12px;
-}
-
-.social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 40px;
-    height: 40px;
-
-    background-color: var(--color-style-logo);
-    border-radius: 50%;
-
-    transition: background-color 250ms var(--timing-function);
-}
-
-.social-list-link:hover{
-    background-color: var(--active-color-button);
-} */
-
-/*_____Customers section_____*/
-/* 
-.customers-list {
-    display: flex;
-    gap: 24px;
-}
-
-.customers-item {
-    flex-basis: calc((100% - 5 * 24px) / 6);
-}
-
-.customers-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 88px;
-    border: 1px solid var(--color-accent-form);
-    border-radius: 4px;
-    fill: var(--color-accent-form);
-
-    transition: border-color 250ms var(--timing-function),
-    fill 250ms var(--timing-function);
-}
-
-.customers-link:hover,
-.customers-link:focus {
-    border-color: var(--active-color-button);
-    fill: var(--active-color-button);
-} */
-
-/*______Footer section______*/
-
-/* .footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
-
-    background-color: var(--base-color-text);
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    align-items: baseline;
-}
-
-.footer-logo {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    color: var(--color-thumb);
-}
-
-.footer-logo-web {
-    color: var(--color-style-logo);
-}
-
-.footer-text {
-    width: 264px;
-    margin-top: 16px;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--border-color);
-}
-
-.social-media, .subscription-title {
-    margin-bottom: 16px;
-    color: var(--maine-color-background);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
-
-.social-media-item, .social-media-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-
-    transition: background-color 250ms var(--timing-function),
-    border-radius 250ms var(--timing-function);
-}
-
-.social-media-link:hover,
-.social-media-link:focus {
-    background-color: var(--color-hover-social);
-    border-radius: 50%;
-}
-
-.social-media-list {
-    display: flex;
-    gap: 16px;
-} */
-
-/* footer form: Subscription form */
-
-/* .subscription-form {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.subscription-form-email {
-    position: relative;
-    width: 264px;
-}
-
-.subscription-input {
-    width: 100%;
-    height: 40px;
-    padding: 8px 16px;
-
-    font-size: 16px;
-    color: var(--border-color);
+    /*_____Customers section_____*/
+    .customers-list {
+        display: flex;
+        gap: 24px;
+    }
     
-    background-color: transparent;
-    border: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    outline: transparent;
+    .customers-item {
+        flex-basis: calc((100% - 5 * 24px) / 6);
+    }
 
-    transition: transform 250ms var(--timing-function),
-    transition-delay 250ms var(--timing-function),
-    opacity 250ms var(--timing-function);
+    /*______Footer section______*/
+
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 80px;
+        align-items: baseline;
+    }
+
 }
 
-.subscription-input:focus + .subscription-form-name,
-.subscription-input:not(:placeholder-shown) + .subscription-form-name {
-    transform: translateY(-120%);
-}
 
-.subscription-input::placeholder {
-    opacity: 0;
-}
-
-.subscription-input:focus::placeholder {
-    opacity: 1;
-    transition-delay: 200ms;
-}
-
-.subscription-form-name{
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.subscription-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 24px;
-
-    line-height: 1.5;
-}
-
-.subscription-btn-send {
-    margin-left: 16px;
-} */
 
 /* Portfolio page: Section examples */
 /* 

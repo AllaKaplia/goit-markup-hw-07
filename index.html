@@ -21,7 +21,11 @@
                     <li class="item"><a class="nav-link" href="">Contacts</a></li>
                 </ul>
             </nav>
-            <button type="button" class="mobil-menu-open" data-menu-open>
+            <button type="button"
+            class="mobil-menu-open js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            >
                 <svg class="mobil-menu-btn" width="32px" height="22px">
                     <use href="./images/sprite.svg#menu-burger-icon"></use>
                 </svg>
@@ -31,9 +35,11 @@
                 <li class="item"><a class="contact" href="tel:+11(000)1111111">+11 (000) 111-11-11</a></li>
             </ul>
         </div>
-        <div class="mobil-menu" data-menu>
+        <div class="mobil-menu js-menu-container" id="menu-container" data-menu>
             <div class="container mobil-menu-container">
-                <button type="button" class="mobil-close-btn" data-menu-close>
+                <button type="button"
+                class="mobil-close-btn js-close-menu"
+                >
                     <svg class="mobil-close-icon">
                         <use href="./images/sprite.svg#icon-close-black"></use>
                     </svg>

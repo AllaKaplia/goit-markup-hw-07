@@ -91,6 +91,9 @@ img {
     .page-header {
         display: flex;
         align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+
     }
 }
 
@@ -101,7 +104,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-    .main-nav, {
+    .main-nav {
         display: flex;
         align-items: center;
     }
@@ -129,6 +132,10 @@ img {
     .site-nav {
         display: flex;
         gap: 40px;
+    }
+
+    .item:not(:last-child) {
+        margin-bottom: 4px;
     }
     .contact {
         text-decoration: none;
@@ -164,10 +171,12 @@ img {
         content: "";
         position: absolute;
         display: block;
+
         width: 100%;
         height: 4px;
         margin-top: 20px;
         margin-bottom: 0;
+
         border-radius: 2px;
         background-color: var(--active-color-button);
     }
@@ -183,10 +192,6 @@ img {
 @media screen and (min-width: 1200px){
     .container-nav{
         margin-left: 76px;
-    }
-
-    .site-nav {
-        margin-left: 77px;
     }
 
     .site-nav .item + .item {
@@ -229,24 +234,12 @@ img {
         padding: 0;
     }
     
-    .mobil-menu-container {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        height: 100%;
-        padding-top: 80px;
-        padding-left: 40px;
-        padding-right: 60px;
-        padding-bottom: 40px;
-    }
-    
     .mobil-menu {
         position: fixed;
         visibility: hidden;
 
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
 
         top: 0;
         left: 0;
@@ -271,7 +264,7 @@ img {
     .mobil-close-btn {
         position: absolute;
         top: 40px;
-        right: 80px;
+        right: 40px;
     
         width: 24px;
         height: 24px;
@@ -280,6 +273,13 @@ img {
         border-radius: 50%;
         cursor: pointer;
     }
+
+    @media screen and (min-width: 320px) {
+        .mobil-close-btn {
+            right: 25px;
+        }
+    }
+
     
     .mobil-close-icon {
         width: 100%;
@@ -344,19 +344,19 @@ img {
     
     .mobil-social-list {
         display: flex;
-        justify-content: space-around;
         gap: 20px;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 370px) {
         .mobil-social-list {
             gap: 40px;
         }
     }
 
-    .mobil-social-list-item {
-        margin-right: 0;
-        flex-basis: calc((100% - 3 * 40px) / 4);
+    @media screen and (min-width: 480px) {
+        .mobil-social-list {
+            gap: 56px;
+        }
     }
     
     .mobil-social-list-link {
@@ -391,13 +391,14 @@ img {
 /*__________Hero section_________*/
 
 .hero-section {
-    text-align: center;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
     padding-top: 112px;
     padding-bottom: 112px;
+
+    text-align: center;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/photo-mobil-bg.jpg);
     background-size: cover;
     background-position: center;
@@ -465,7 +466,10 @@ img {
 
 .hero-title {
     max-width: 319px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -475,7 +479,9 @@ img {
 
 @media screen and (min-width: 768px) {
     .hero-title {
+        margin-bottom: 40px;
         max-width: 496px;
+
         font-weight: 700;
         font-size: 56px;
         line-height: 1.07;
@@ -484,6 +490,7 @@ img {
 
 @media screen and (min-width: 1200px) {
     .hero-title {
+        margin-bottom: 48px;
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
@@ -588,6 +595,9 @@ img {
 
 .benefits .item {
     margin-right: 0;
+}
+
+.benefits .item:not(:last-child) {
     margin-bottom: 72px;
 }
 
@@ -595,6 +605,9 @@ img {
     .benefits .item {
         margin-bottom: 0;
         flex-basis: calc((100% - 1*24px) / 2);
+    }
+    .benefits .item:not(:last-child) {
+        margin-bottom: 0;
     }
 }
 
@@ -704,8 +717,11 @@ img {
 .resumes-item {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 72px;
     max-width: 264px;
+}
+
+.resumes-item:not(:last-child) {
+    margin-bottom: 72px;
 }
 
 @media screen and (min-width: 768px) {
@@ -714,6 +730,9 @@ img {
         margin-left: 0;
         margin-right: 0;
         flex-basis: calc((100% - 1*24px) / 2);
+    }
+    .resumes-item:not(:last-child) {
+        margin-bottom: 0;
     }
 }
 
@@ -726,6 +745,7 @@ img {
 }
 
 .resume-name {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -782,22 +802,19 @@ img {
 .customers-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 16px;
     row-gap: 72px;
 }
 
 @media screen and (min-width: 768px) {
     .customers-list {
-        display: flex;
-        flex-wrap: wrap;
         column-gap: 24px;
-        row-gap: 72px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .customers-list {
-        display: flex;
         gap: 24px;
     }
 }
@@ -908,8 +925,8 @@ img {
 }
 
 .footer-text {
-    width: 264px;
     margin-top: 16px;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -1087,13 +1104,12 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    
 
-    width: 392px;
+    width: 280px;
     height: 586px;
-    padding-top: 72px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-bottom: 24px;
 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1102,6 +1118,34 @@ img {
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
+}
+
+@media screen and (min-width: 320px) {
+    .modal {
+        width: 305px;
+        padding-top: 60px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .modal {
+        width: 345px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .modal{
+        width: 392px;
+        padding-top: 72px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 .modal-button {
@@ -1120,6 +1164,7 @@ img {
     transition: background-color 250ms var(--timing-function),
     fill 250ms var(--timing-function);
 }
+
 
 .modal-button:active, .modal-button:focus,
 .modal-button:hover {
@@ -1258,9 +1303,21 @@ img {
 
 .registration-form-btn {
     display: block;
-    margin-top: 24px;
+    margin-top: 4px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (min-width: 320px) {
+    .registration-form-btn {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .registration-form-btn {
+        margin-top: 12px;
+    }
 }
 
 .check {
@@ -1372,7 +1429,8 @@ img {
     transition: transform 250ms var(--timing-function);
 }
 
-.examples-link:hover .examples-overlay {
+.examples-link:hover .examples-overlay,
+.examples-link:focus .examples-overlay {
     transform: translateY(0);
 }
 

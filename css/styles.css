@@ -199,6 +199,10 @@ img {
         margin-left: 40px;
     }
 
+    .nav-link {
+        margin-bottom: 0;
+    }
+
     .item:not(:last-child) {
         margin-bottom: 0;
     }
@@ -593,6 +597,12 @@ img {
     color: var(--base-color-text);
 }
 
+@media screen and (max-width: 767.99px) {
+    .benefit-subtitle {
+        text-align: center;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .benefit-subtitle, .resume-name {
         font-size: 20px;
@@ -955,7 +965,7 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-align: justify;
+    text-align: start;
     color: var(--border-color);
 }
 
